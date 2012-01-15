@@ -2,6 +2,16 @@ var loading = false;
 var debug = false;
 var interval = 0;
 AUTO_REFRESH = 600000; 
+var passenger = {};
+
+function isUpdatedPassenger(passengerNew, passengerOld){
+   if (!(passengerOld.hasOwnProperty('state')))
+      return true;
+   if (passengerOld.state != passengerNew.state)
+   	  return true;
+   if (passengerOld.number != passengerNew.number)
+      return true;
+}
 function success(data)
 {
  if(debug)
@@ -13,10 +23,19 @@ function success(data)
  var json = $.parseJSON(data);
  if(json.hasOwnProperty('data') && json.data.hasOwnProperty('passenger'))
  {
-  var passenger = parseStatus(json.data.passenger[0]);
-  $('.main-ticket-wrapper .ticket-status-text').html(passenger.state);
-  $('.main-ticket-wrapper .ticket-status-num').html(passenger.number);
-  $('.main-ticket-wrapper .ticket-box').addClass(passenger.color);
+  var passengerNew = parseStatus(json.data.passenger[0]);
+  $('.main-ticket-wrapper .ticket-status-text').html(passengerNew.state);
+  $('.main-ticket-wrapper .ticket-status-num').html(passengerNew.number);
+  $('.main-ticket-wrapper .ticket-box').addClass(passengerNew.color);
+  if(isUpdatedPassenger(passengerNew,passenger)) {
+  		passenger = passengerNew;
+  		console.log("Updated");
+  		window.plugins.statusBarNotification.notify("TrainCard", "Current status: " + passenger.state + " " + passenger.number); 
+  }
+  else
+  {
+  		console.log("No changes");
+  }
  }
  $('.ticket-content').show();
 }
