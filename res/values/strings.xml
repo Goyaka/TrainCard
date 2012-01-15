@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrainCard</string>
+    <string name="service_started">Service started</string>
+    <string name="service_label">TrainCard</string>
+</resources>

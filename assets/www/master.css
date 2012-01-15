@@ -1,0 +1,129 @@
+#time {
+	font-size:80%;
+	text-align:center;
+}
+
+@font-face {
+  font-family: 'Magra';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Magra'), url('magra.woff') format('woff');
+}
+
+.ticket-box
+{
+	width:52px;
+	height:51px;
+	border-radius:4px;
+	float:right;
+	text-align:center;
+	margin-left:8px;
+	color:#fff;
+}
+
+.ticket-box .ticket-status-text
+{
+	font-size:11px;
+	margin-top:10px;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+
+.ticket-box .ticket-status-num
+{
+	font-size:17px;
+}
+
+.ticket-box.green
+{
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.11, #568D6D),
+	    color-stop(0.55, #96CDB0)
+	);
+}	
+
+.ticket-box.orange
+{
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.11, #FF9C0B),
+	    color-stop(0.85, #FFCAC5)
+	);
+}
+
+.ticket-box.grey
+{
+	color:#000;
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.05, #555),
+	    color-stop(0.95, #eee)
+	);
+}
+
+.ticket-box.grey .ticket-status-num
+{
+    margin-top:5px;
+    font-size:65%;
+}
+
+.ticket-box.red
+{
+	
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.05, #D01313),
+	    color-stop(0.95, #F5CDCB)
+	);
+}
+
+.ticket-box.clrfix
+{
+
+	height:10px;
+	width:1px;
+	clear:both;	
+}
+
+.main-ticket-wrapper {
+	text-align:center;
+	font-family: 'Magra', sans-serif;
+}
+.main-ticket-wrapper .ticket-box {
+    margin:0 auto;
+	width: 100px;
+	height:100px;
+	float:none;
+	padding:10px 0;
+}
+
+.main-ticket-wrapper .ticket-box .ticket-status-num {
+    font-size:30px;
+} 
+
+.main-ticket-wrapper .ticket-box .ticket-status-text {
+    font-size:30px;
+}
+
+.footer {
+	text-align:center;
+	font-size:80%;
+}
+
+#main {
+	font-size:60%;
+}
+
+#nextreload {
+	font-size:60%;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>TrainCard</title>
+    
+	  <link rel="stylesheet" href="master.css" />
+	  <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+	  
+	  <script type="text/javascript" charset="utf-8" src="phonegap-1.3.0.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+	  <script type="text/javascript" charset="utf-8" src="jquery.strftime-minified.js"></script>
+	  <script src="jquery.mobile-1.0.min.js"></script>
+	  
+	  <script type="text/javascript" charset="utf-8" src="main.js"></script>
+
+  </head>
+  <body onload="init();"> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>TrainCard</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div style="clear:both"></div>
+		<div class="ticket-content">
+			<div class="main-ticket-wrapper">
+				<div class="ticket-box">
+				        <div class="ticket-status-text">.</div>
+				        <div class="ticket-status-num">.</div>
+				</div>
+			</div>
+			<p id="time">..</p>
+			
+			<div style="clear:both"></div> 
+		</div>
+		<pre id="main">
+		</pre>
+		<a id="reload" href="#" data-role="button">Reload</a>
+		<div>
+			<div data-role="fieldcontain">
+				<label for="flip-b">Auto-Reload:</label>
+				<select name="slider" id="autoreload" data-role="slider">
+					<option value="no">No</option>
+					<option value="yes">Yes</option>
+				</select> 
+			</div>
+			<div id="nextreload"></div>
+		</div>
+        
+	</div><!-- /content -->
+
+	<div data-role="footer" class="footer">
+		<small>Goyaka Labs</small>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
